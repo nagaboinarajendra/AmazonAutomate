@@ -1,0 +1,54 @@
+package com.ta.amazon;
+import static org.testng.Assert.assertEquals;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.*;
+import com.amazon.pages.HomePage;
+import com.amazon.pages.LoginPage;
+import com.amazon.pages.ProfilePage;
+import com.amazon.pages.SelectByStarRating;
+public class AutomateAmazon {
+	WebDriver driver;
+	HomePage home;
+	LoginPage loginPage;
+	ProfilePage profilePage;
+	@BeforeClass
+	public void setProperties() {
+		 System.setProperty("webdriver.chrome.driver","C:\\Users\\admin\\Desktop\\TestAutomation\\drivers\\chromedriver.exe");
+		 driver = new ChromeDriver();
+		 home = new HomePage(driver);
+	}
+	@Test(description = "Launches the Amazon site", priority=1)
+	public void launchSite(){
+		driver.get("https://www.amazon.in/");
+		assertEquals("Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in",home.getTitle());
+	}
+	@Test(description = "Login to amazon website", priority=2)
+	public void logIn() {
+		loginPage = home.clickSignin();
+		assertEquals("Amazon Sign In",home.getTitle());
+		profilePage = loginPage.login("nagabhoinarajendra@gmail.com", "Radgjmptw96*");
+		assertEquals("Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in",home.getTitle());
+	}
+	@Test(description = "selecting allbooks from books menu", priority=3)
+	public void selectAllBooks() {
+		profilePage.selectBooks();
+		profilePage.selectAllBooks();
+	}
+	@Test(description = "searching for 'selenium with java' books", priority=4)
+	public void searchForBook() {
+		profilePage.search("Selenium with java");
+	}
+	@Test(description = "selecting 4 star rated books",priority = 5)
+	public void selectFourStarRating() {
+		SelectByStarRating fourStar = new SelectByStarRating(driver);
+		fourStar.selectFourStarRating();
+	}
+	@Test(description = " select selenium Testing Tools Cook Book", priority = 6)
+	public void selectBook() {
+		assertEquals("Amazon.in: Selenium with java - 4 Stars & Up: Books", home.getTitle());
+	}
+
+	
+}
+
