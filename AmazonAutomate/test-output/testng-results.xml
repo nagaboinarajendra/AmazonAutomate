@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="76141" started-at="2018-09-05T14:38:32Z" finished-at="2018-09-05T14:39:48Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="76141" started-at="2018-09-05T14:38:32Z" finished-at="2018-09-05T14:39:48Z">
+      <class name="com.ta.amazon.AutomateAmazon">
+        <test-method status="PASS" signature="setProperties()[pri:0, instance:com.ta.amazon.AutomateAmazon@29774679]" name="setProperties" is-config="true" duration-ms="3117" started-at="2018-09-05T14:38:32Z" finished-at="2018-09-05T14:38:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setProperties -->
+        <test-method status="PASS" signature="launchSite()[pri:1, instance:com.ta.amazon.AutomateAmazon@29774679]" name="launchSite" duration-ms="32933" started-at="2018-09-05T14:38:35Z" description="Launches the Amazon site" finished-at="2018-09-05T14:39:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSite -->
+        <test-method status="PASS" signature="logIn()[pri:2, instance:com.ta.amazon.AutomateAmazon@29774679]" name="logIn" duration-ms="7696" started-at="2018-09-05T14:39:08Z" description="Login to amazon website" finished-at="2018-09-05T14:39:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logIn -->
+        <test-method status="PASS" signature="selectAllBooks()[pri:3, instance:com.ta.amazon.AutomateAmazon@29774679]" name="selectAllBooks" duration-ms="8719" started-at="2018-09-05T14:39:15Z" description="selecting allbooks from books menu" finished-at="2018-09-05T14:39:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectAllBooks -->
+        <test-method status="PASS" signature="searchForBook()[pri:4, instance:com.ta.amazon.AutomateAmazon@29774679]" name="searchForBook" duration-ms="10933" started-at="2018-09-05T14:39:24Z" description="searching for &#039;selenium with java&#039; books" finished-at="2018-09-05T14:39:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchForBook -->
+        <test-method status="PASS" signature="selectFourStarRating()[pri:5, instance:com.ta.amazon.AutomateAmazon@29774679]" name="selectFourStarRating" duration-ms="153" started-at="2018-09-05T14:39:35Z" description="selecting 4 star rated books" finished-at="2018-09-05T14:39:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectFourStarRating -->
+        <test-method status="PASS" signature="selectBook()[pri:6, instance:com.ta.amazon.AutomateAmazon@29774679]" name="selectBook" duration-ms="38" started-at="2018-09-05T14:39:35Z" description=" select selenium Testing Tools Cook Book" finished-at="2018-09-05T14:39:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectBook -->
+        <test-method status="PASS" signature="clickSeeMoreAndSeeLess()[pri:7, instance:com.ta.amazon.AutomateAmazon@29774679]" name="clickSeeMoreAndSeeLess" duration-ms="12373" started-at="2018-09-05T14:39:35Z" description=" clicking seeMore and seeLess" finished-at="2018-09-05T14:39:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickSeeMoreAndSeeLess -->
+        <test-method status="PASS" signature="choosePaperBack()[pri:8, instance:com.ta.amazon.AutomateAmazon@29774679]" name="choosePaperBack" duration-ms="143" started-at="2018-09-05T14:39:48Z" description="choose paperback" finished-at="2018-09-05T14:39:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- choosePaperBack -->
+      </class> <!-- com.ta.amazon.AutomateAmazon -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

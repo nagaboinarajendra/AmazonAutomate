@@ -1,5 +1,6 @@
 package com.ta.amazon;
 import static org.testng.Assert.assertEquals;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
@@ -34,6 +35,7 @@ public class AutomateAmazon {
 	public void selectAllBooks() {
 		profilePage.selectBooks();
 		profilePage.selectAllBooks();
+		assertEquals("Books",driver.findElement(By.xpath("//span[@class = 'nav-search-label']")).getText());
 	}
 	@Test(description = "searching for 'selenium with java' books", priority=4)
 	public void searchForBook() {
@@ -46,9 +48,15 @@ public class AutomateAmazon {
 	}
 	@Test(description = " select selenium Testing Tools Cook Book", priority = 6)
 	public void selectBook() {
-		assertEquals("Amazon.in: Selenium with java - 4 Stars & Up: Books", home.getTitle());
+		assertEquals("Amazon.in: Selenium with java: Books", home.getTitle());
 	}
-
-	
+	@Test(description = " clicking seeMore and seeLess", priority = 7)
+	public void clickSeeMoreAndSeeLess() {
+		profilePage.clickSeeMore();
+		profilePage.clickSeeLess();
+	}
+	@Test(description ="choose paperback", priority = 8)
+	public void choosePaperBack() {
+		profilePage.choosePaperBack();
+	}
 }
-
